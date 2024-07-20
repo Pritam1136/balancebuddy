@@ -1,0 +1,38 @@
+<div class="max-w-xl mx-auto bg-white p-6 rounded-md shadow-md">
+  <div class="mb-4">
+    <label class="block text-gray-700">User Name*</label>
+    <input
+      type="text"
+      [(ngModel)]="workout.name"
+      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+      placeholder="User Name"
+    />
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700">Workout Type*</label>
+    <select
+      [(ngModel)]="workout.type"
+      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+    >
+      <option>Running</option>
+      <option>Swimming</option>
+      <option>Cycling</option>
+      <option>Yoga</option>
+    </select>
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700">Workout Minutes*</label>
+    <input
+      type="number"
+      [(ngModel)]="workout.minutes"
+      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+      placeholder="Workout Minutes"
+    />
+  </div>
+  <button
+    (click)="addWorkout()"
+    class="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
+  >
+    Add Workout
+  </button>
+</div>
